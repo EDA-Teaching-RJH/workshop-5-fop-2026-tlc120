@@ -1,16 +1,21 @@
 while True:
-    coins1 = int(input("Please insert a coin. "))
-    coins2 = input(f"You have insert {coins1}. Is that the right amount coins? ")
-    if coins2 == "NO":
-        continue
-    elif coins2 == "Yes":
-        break
-match coins3:
-    case "Picard" | "Riker" | "La Forge":
-        print("Command Division")
-    case "Data" | "Worf":
-        print("Operations Division")
-    case "Crusher" | "Troi":
-        print("Sciences Division")
-    case _:
-        print("Character not found. Please enter a main TNG character.")
+    x = int(input("Please insert a coin. "))
+
+    if x <= 75:
+        print(f"You have owe {x}p. ")
+
+        y = (input("Is the amount is right? ")) 
+        if y == "yes":
+            print(f"You have owe {x}p. ")
+            break
+
+        elif y == "no":
+            u = int(input("Please insert a coin. "))
+            x = u + x
+            print(f"You have owe {x}p. ")
+        else:
+            print("Invalid input")
+            continue
+    else:
+       print(f"You have owe {x}p. ") 
+       break
